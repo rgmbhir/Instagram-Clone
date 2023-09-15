@@ -42,8 +42,8 @@
                     <article class="post">
                         <div class="post__header">
                             <div class="post__profile">
-                                <a href="" target="_blank" class="post__avatar">
-                                    <img src="{% static 'assets1/defaultuser.png' %}" alt="User Picture">
+                                <a href="{% url 'profile' post.post.user.username %}" target="_blank" class="post__avatar">
+                                    <img src="{{ post.post.user.profile.image.url }}" alt="User Picture">
                                 </a>
                                 <a href="" target="_blank" class="post__user">{{ post.post.user.username }}</a>
                             </div>

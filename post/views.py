@@ -19,6 +19,7 @@ def index(request):
     gropu_ids = []
     for post in posts:
         gropu_ids.append(post.id)
+
     post_items = Stream.objects.filter(id__in=gropu_ids).all()
     return render(request, 'index.html', {'post_items': post_items, 'all_user': all_user, 'profile':profile})
 

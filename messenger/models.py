@@ -5,6 +5,7 @@ from django.db.models import Max
 
 # Create your models here.
 
+
 class Message(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
     sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='from_user')

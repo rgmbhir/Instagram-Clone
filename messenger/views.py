@@ -63,7 +63,6 @@ def SendMessage(request):
         return redirect('inbox')
 
 
-
 def searchuser(request):
     query = request.GET.get('q')
     context = {}

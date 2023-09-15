@@ -64,6 +64,7 @@ class Stream(models.Model):
         user = post.user
         followers = Follow.objects.all().filter(following=user)
         for follower in followers:
+            #print(follower.follower, follower)
             stream = Stream(post=post, user=follower.follower, date=post.posted, following=user)
             stream.save()
 
